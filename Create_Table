@@ -1,0 +1,15 @@
+-- controle.flc_fluxo_carga definition
+
+-- Drop table
+
+-- DROP TABLE controle.flc_fluxo_carga;
+
+CREATE TABLE controle.flc_fluxo_carga (
+	car_seq_carga int4 NULL,
+	flc_dir_job varchar(88) NULL,
+	flc_dsc_job varchar(88) NULL,
+	flc_dir_transformacao varchar(88) NULL,
+	flc_dsc_transformacao varchar(88) NULL,
+	flc_dat_inicio timestamp NULL,
+	flc_dat_fim timestamp NULL,
+	flc_qtd_registro int4 NULL);
