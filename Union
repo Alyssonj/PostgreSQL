@@ -1,0 +1,37 @@
+SELECT
+  0 ORDEM
+, cod_caixa
+, nom_caixa
+, cod_loja
+, flg_ferias
+, car_seq_carga
+, '${car_dat_carga}' DATA_CARGA
+FROM stg.stgc_caixa
+UNION
+SELECT
+  -3 ORDEM
+, -3 cod_caixa
+, 'NÃO LOCALIZADO'nom_caixa
+, -3 cod_loja
+, 'NL' flg_ferias
+, 0 CAR_SEQ_CARGA
+, '${car_dat_carga}' DATA_CARGA
+UNION
+SELECT
+  -2 ORDEM
+, -2 cod_caixa
+, 'NÃO INFORMADO'nom_caixa
+, -2 cod_loja
+, 'NI' flg_ferias
+, 0 CAR_SEQ_CARGA
+, '${car_dat_carga}' DATA_CARGA
+UNION
+SELECT
+  -1 ORDEM
+, -1 cod_caixa
+, 'NÃO SE APLICA'nom_caixa
+, -1 cod_loja
+, 'NA' flg_ferias
+, 0 CAR_SEQ_CARGA
+, '${car_dat_carga}' DATA_CARGA
+ORDER BY 1,2
